@@ -1,8 +1,8 @@
 # 01-mobile-first
 
-**Author**: Nicholas C and Ariel
-**Previous Collaborations** Nicholas and Rob and Fred and Joel Nicholas C and Fred and Ariel and Joel and Kat
-**Version**: 1.2.0 (increment the patch/fix version number up if you make more commits past your first submission)
+**Author**: Kerry and Ariel
+**Previous Collaborations** (Nicholas C and Ariel) and (Kerry and Joel)
+**Version**: 1.4.0 (increment the patch/fix version number up if you make more commits past your first submission)
 
 ## Overview
 We are building a blog site to the designer's specifications. We were to mirror a few images of the sample site provided by the customer.
@@ -28,12 +28,14 @@ We were given starter code with the html file completed. You would have to layou
 1. Refactored all the concatenation into template literals
 1. Created selector menus and functionality for those menus
 1. Created tab selectors that hid and showed elements of the dom
-
+## Day 4
+1. Linked Handlebars CDN
+1. Added Handlebars script template in HTML file
+1. Used Handlebars to render our articles
+1. Refactored object methods to use fat arrow notation
 
 ## Architecture
 We used CSS and modified an html file already given to us. We imported a normalized CSS file from https://github.com/necolas/normalize.css/
-
-
 
 ## Change Log
 1. We set up the directories
@@ -43,10 +45,11 @@ We used CSS and modified an html file already given to us. We imported a normali
 1. Styled main-nav
 1. Added style to main and footer
 1. added README
-Day 2
-Day 3
-Added articleView.js
-
+1. Day 2
+1. Day 3
+1. Added articleView.js
+1. Refactored template to use Handlebars
+1. End of change log
 
 ## Credits and Collaborations
 We grabbed a normalize CSS file from https://github.com/necolas/normalize.css/
