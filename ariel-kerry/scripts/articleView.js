@@ -1,10 +1,13 @@
 'use strict';
 
-// DONE: Where possible, refactor methods into arrow functions, including the document.ready() method at the bottom.
+let articleView = {};
+
+// TODO: Where possible, refactor methods into arrow functions, including the document.ready() method at the bottom.
 
 // COMMENT: How do arrow functions affect the context of "this"? How did you determine if a function could be refactored?
 // PUT YOUR RESPONSE HERE
-const populateFilters = () => {
+
+articleView.populateFilters = () => {
   $('article').each(function() {
     if (!$(this).hasClass('template')) {
       let val = $(this).find('address a').text();
@@ -23,7 +26,7 @@ const populateFilters = () => {
   });
 };
 
-const handleAuthorFilter = () => {
+articleView.handleAuthorFilter = () => {
   $('#author-filter').on('change', function() {
     if ($(this).val()) {
       $('article').hide();
@@ -36,7 +39,7 @@ const handleAuthorFilter = () => {
   });
 };
 
-const handleCategoryFilter = () => {
+articleView.handleCategoryFilter = () => {
   $('#category-filter').on('change', function() {
     if ($(this).val()) {
       $('article').hide();
@@ -49,7 +52,7 @@ const handleCategoryFilter = () => {
   });
 };
 
-const handleMainNav = () => {
+articleView.handleMainNav = () => {
   $('.main-nav').on('click', '.tab', function() {
     $('.tab-content').hide();
     $('#' + $(this).data('content')).fadeIn();
@@ -58,21 +61,14 @@ const handleMainNav = () => {
   $('.main-nav .tab:first').click();
 };
 
-const setTeasers = () => {
-  console.log('setTeasers function called');
+articleView.setTeasers = () => {
   $('.article-body *:nth-of-type(n+2)').hide();
-  console.log('should hide nth-of-type(n+2)');
   $('article').on('click', 'a.read-on', function(e) {
     e.preventDefault();
-    console.log('this is: ' + this);
-    console.log('this parent is: ' + this.parent());
-    if ($(this).text() === 'Read on &rarr;') {
-      console.log('read on clicked');
-      console.log('if statement this is: ' + this);
+    if ($(this).text() === 'Read on →') {
       $(this).parent().find('*').fadeIn();
       $(this).html('Show Less &larr;');
     } else {
-      console.log('show less clicked');
       $('body').animate({
         scrollTop: ($(this).parent().offset().top)
       },200);
@@ -83,9 +79,9 @@ const setTeasers = () => {
 };
 
 $(document).ready(() => {
-  populateFilters();
-  handleCategoryFilter();
-  handleAuthorFilter();
-  handleMainNav();
-  setTeasers();
+  articleView.populateFilters();
+  articleView.handleCategoryFilter();
+  articleView.handleAuthorFilter();
+  articleView.handleMainNav();
+  articleView.setTeasers();
 })
