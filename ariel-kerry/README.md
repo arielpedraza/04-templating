@@ -49,6 +49,7 @@ We used CSS and modified an html file already given to us. We imported a normali
 1. Day 3
 1. Added articleView.js
 1. Refactored template to use Handlebars
+1. End of change log
 
 ## Credits and Collaborations
 We grabbed a normalize CSS file from https://github.com/necolas/normalize.css/
